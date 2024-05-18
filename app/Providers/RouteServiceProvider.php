@@ -18,14 +18,32 @@ class RouteServiceProvider extends ServiceProvider
      * @var string
      */
     public const HOME = '/dashboard';
+    public const SKIPPED_ROUTES_DB = [
+        'api/connections',
+        'api/jwt',
+        'api/database-configuration',
+        'api/login',
 
+    ];
+
+    public const SKIPPED_ROUTES_JWT = [
+        'login',
+        'database-configuration',
+        'logout',
+    ];
+    public const SKIPPED_ROUTES_PERMISSION = [
+        'dashboard',
+        'home',
+        '/',
+        'logout',
+    ];
     /**
      * Define your route model bindings, pattern filters, and other route configuration.
      */
     public function boot(): void
     {
         RateLimiter::for('api', function (Request $request) {
-            return Limit::perMinute(60)->by($request->user()?->id ?: $request->ip());
+            return Limit::perMinute(120)->by($request->user()?->id ?: $request->ip());
         });
 
         $this->routes(function () {
