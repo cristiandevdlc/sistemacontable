@@ -28,15 +28,15 @@ class DashboardController extends Controller
         $data['token'] = $token;
 
 
-        // $tInstance = new Token($token);
-        // $payload = JWTAuth::decode($tInstance);
-        // dd($token, $payload);
-        // $user = auth()->setToken($token)->user();
-        // dd($user);
-        // $user = JWTAuth::parseToken($token)->authenticate();
-        // dd($user);
-        // dd(URL::previousPath());
-        // return ["AAAAAAA", $request->user()];
+        $tInstance = new Token($token);
+        $payload = JWTAuth::decode($tInstance);
+        dd($token, $payload);
+        $user = auth()->setToken($token)->user();
+        dd($user);
+        $user = JWTAuth::parseToken($token)->authenticate();
+        dd($user);
+        dd(URL::previousPath());
+        return ["AAAAAAA", $request->user()];
         $user = $request->user();
         $data['user'] = $user;
         // $agente = agentesvsusuarios::where('usuarioid', $user->usuario_idUsuario)->first();
@@ -52,20 +52,22 @@ class DashboardController extends Controller
 
         // if($agente)
         //     $data['isAgent'] = true;
-        if (URL::previousPath() === '/login') {
-            if ($rol && $menu)
-                $data['menuInicio'] = $menu;
-            else {
-                $data['menuInicio']['menu_url'] = 'dashboard';
-            }
-        }
+        // if (URL::previousPath() === '/login') {
+        //     if ($rol && $menu)
+        //         $data['menuInicio'] = $menu;
+        //     else {
+        //         $data['menuInicio']['menu_url'] = 'dashboard';
+        //     }
+        // }
+
 
         // $request->header('Authorization',);
-        if (str_contains($request->url(), Connection::DEVELOP_ENVIROMENT)) {
-            $com = Connection::find(Session::get('connection'));
-            $data['localServerInfo'] =  $com['Ciudad'] . ': ' . $com['host'] . ':' . $com['port'];
-        }
-
+        // if (str_contains($request->url(), Connection::DEVELOP_ENVIROMENT)) {
+        //     $com = Connection::find(Session::get('connection'));
+        //     $data['localServerInfo'] =  $com['Ciudad'] . ': ' . $com['host'] . ':' . $com['port'];
+        // }
+        
+        dd($data);
         // usuario_idRol
 
         return Inertia::render('Home', $data);

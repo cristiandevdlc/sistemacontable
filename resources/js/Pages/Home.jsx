@@ -30,6 +30,10 @@ export default function Dashboard({ auth }) {
             path: 'dashboard',  
             import: lazy(() => import("./Dashboard"))
         },
+        // {
+        //     path: 'login',  
+        //     import: lazy(() => import("./Login"))
+        // },
 
     ];
 
