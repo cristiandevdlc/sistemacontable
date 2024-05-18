@@ -1,0 +1,35 @@
+.TextInputWrapper {
+    position: relative;
+    width: 100%;
+  
+    input {
+      width: 100%;
+      padding: 10px;
+      border-radius: 12px;
+      border: 1px solid #ccc;
+    }
+  
+    label {
+      position: absolute;
+      top: 10px;
+      left: 15px;
+      font-family: verdana;
+      pointer-events: none;
+      transition: all 0.2s ease-out;
+      color: #333;
+    }
+  
+    &.focused {
+      label,
+      input:not(:placeholder-shown) + label {
+        top: -14px;
+        font-size: 14px;
+        padding: 2px 20px 2px 15px;
+        color: #55585c;
+        background-color: white;
+      }
+    }
+  }
+
+  
+  

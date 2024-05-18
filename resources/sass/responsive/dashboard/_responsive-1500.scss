@@ -1,0 +1,219 @@
+
+.containerDashboardAdmin {
+    display: flex;
+    flex-direction: row;
+
+    &__dasboard {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        &--header {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-top: 1vh;
+
+            p {
+                color: #1B2654;
+                font-weight: bold;
+            }
+        }
+
+        &--body {
+            margin-top: 1vh;
+            display: flex;
+            flex-direction: row;
+
+            .containerCard1 {
+                width: 60%;
+                padding: 0 1vh 0 0;
+                height: 100vh;
+
+                &__cardsNewsCalendar {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    height: 30%;
+
+                    &--news {
+                        width: 50%;
+                        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+                        margin-right: 1vh;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        padding: 1rem;
+                        border-radius: 10px;
+
+                        p:nth-of-type(1) {
+                            color: #FC4C02;
+                            font-size: 14px;
+                        }
+
+                        p:nth-of-type(2) {
+                            color: #1B2654;
+                            font-size: 14px;
+                        }
+
+                        p:nth-of-type(3) {
+                            color: #b6b6b6;
+                            font-style: italic;
+                            font-size: 12px;
+                            font-weight: lighter;
+                        }
+                    }
+
+                    &--calendar {
+                        border-radius: 10px;
+                        width: 50%;
+                        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+                    }
+                }
+
+                &__cardsNewsCalendar:last-child {
+                    padding: 0 10px;
+                    margin-top: 1vh;
+                    height: 60vh;
+                    border-radius: 10px;
+                    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+                    
+                    .swiper {
+                        width: 100%;
+                        display: flex;
+                        overflow-x: scroll;
+                        align-items: center;
+                        margin: 0 auto;
+                    }
+                    
+                    .swiper-wrapper {
+                        display: flex;
+                        flex-direction: row;
+                        width: 10px;
+                        transition: transform 0.3s ease-in-out;
+                    }
+
+                    .swiper-slide {
+                        flex: 0 0 100px;
+                        height: 50vh;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        background-color: #ffffff;
+                        margin: 0 10px;
+                        font-size: 24px;
+                        transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+                        .imgPerson{
+                            border: 1px solid rgb(255, 255, 255);
+                            border-radius: 20%;
+                            width: 250px;
+                            height: 250px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            box-shadow: rgba(66, 66, 66, 0.2) 0px 2px 8px 0px;
+                            img{
+                                border-radius: 20%;
+                                width: 250px;
+                                height: 250px;
+                                padding: 15px;
+                                transform: scale(1);
+                            }
+                        }
+                        .infoPerson{
+                            margin-top: 1vh;
+                            background-color: white;
+                            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+                            border-radius: 50px;
+                            text-align: center;
+                            width: 100%;
+                            padding: 0.5vh;
+                            p{color: #FC4C02; font-size: 18px; font-weight: bold;}
+                            p:last-child{color: #b6b6b6; font-size: 14px;}
+                        }
+                        &:hover{
+                            transform: scale(1.1);
+                            opacity: 1;
+                        }
+                    }
+
+
+                }
+
+                .swiper::-webkit-scrollbar {
+                    width: 5px;
+                    height: 5px;
+                }
+
+                .swiper::-webkit-scrollbar-track {
+                    background-color: #ffffff;
+                    border-radius: 4px;
+                }
+
+                .swiper::-webkit-scrollbar-thumb {
+                    background-color: #1B2654;
+                    border-radius: 2px 4px 4px 2px;
+                }
+
+                .swiper::-webkit-scrollbar-thumb:hover {
+                    background-color: #1B2654;
+                }
+            }
+
+            .containerCard2 {
+                width: 40%;
+                height: 100%;
+                
+                &__MVV{
+                    width: 100%;
+                    height: 30%;
+                    border-radius: 10px;
+                    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+                    padding: 1vh;
+                    &--mision{
+                        
+                        p{
+                            color: #FC4C02;
+                            font-size: 14px;
+                        }
+                        p:last-child{
+                            color: #1B2654;
+                            font-size: 14px;
+                            text-align: justify;
+                        }
+                    }
+                    &--vision{
+                        
+                        p{
+                            font-size: 14px;
+                            color: #FC4C02;
+                        }
+                        p:last-child{
+                            color: #1B2654;
+                            text-align: justify;
+                            font-size: 14px;
+                        }
+                    }
+                    &--valores{
+                        
+                        p{color: #FC4C02;font-size: 14px;}
+                        .valores{
+                            display: flex;
+                            justify-content: space-between;
+                            .valores__contain{
+                                p{
+                                    color: #1B2654;
+                                    font-size: 14px;
+                                }
+                            }
+                            
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+

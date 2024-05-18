@@ -1,0 +1,21 @@
+.fotoEmpleado {
+    height: 300px;
+    width: 300px;
+    margin-bottom: 15px;
+    position: relative;
+}
+.imgCont{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#image {
+    height: 100%;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+
+}

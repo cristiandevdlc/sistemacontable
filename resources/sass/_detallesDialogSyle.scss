@@ -1,0 +1,233 @@
+.wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.monitor-dialog-details {
+    position: relative;
+    color: white;
+    border-radius: 24px;
+    background: linear-gradient(90deg, #1B2654 0%, rgba(27, 38, 84, 0.92) 100%);
+    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.monitor-dialog-options {
+    // flex flex-col w-full h-full gap-3
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    gap: 0.75rem;
+}
+
+.order-button {
+    position: relative;
+    display: flex;
+    color: white;
+    border-radius: 24px;
+    background: linear-gradient(90deg, #1B2654 0%, rgba(43, 56, 112, 0.87) 100%);
+    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
+    // justify-content: baseline;
+    .img-box {
+        position: relative;
+        height: 100%;
+        width: 100%;
+        border-radius: 7px 50px 50px 7px;
+        display: flex; /* Usar Flexbox */
+        align-items: center; /* Centrar verticalmente */
+        justify-content: left;
+        // background: #1B2654;
+        // background-position: 20%;
+        // background-image: url('../png/unidad_estacionario.png');
+        // background-size: contain;
+
+        img {
+            position: absolute;
+            // justify-content: center;
+            // border-radius: 50px;
+            // transform: translate(-10%, -70%);
+            // top: 50%;
+            // bottom: 50%;
+            z-index: 9;
+            scale: calc(38%);
+        }
+        
+        .img {
+            position: absolute;
+            // justify-content: center;
+            // border-radius: 50px;
+            // transform: translate(-10%, -70%);
+            // top: 50%;
+            // bottom: 50%;
+            z-index: 9;
+            scale: calc(80%);
+        }
+
+        .blur-thing {
+            height: 100%;
+            width: 45%;
+            border-radius: 25px 50px 50px 25px;
+            background: #1B2654;
+            filter: blur(1.5px);
+        }
+    }
+
+    span {
+        position: absolute;
+        bottom: 10px;
+        right: 13px;
+        place-content: end;
+    }
+}
+
+.asignar-button-grey {
+    position: relative;
+    display: flex;
+    color: white;
+    border-radius: 24px;
+    background: linear-gradient(90deg, #7c7c7c 0%, rgba(160, 160, 160, 0.87) 100%);
+    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
+    // justify-content: baseline;
+    .img-box {
+        position: relative;
+        height: 100%;
+        width: 100%;
+        border-radius: 7px 50px 50px 7px;
+        display: flex; /* Usar Flexbox */
+        align-items: center; /* Centrar verticalmente */
+        justify-content: left;
+        // background: #1B2654;
+        // background-position: 20%;
+        // background-image: url('../png/unidad_estacionario.png');
+        // background-size: contain;
+
+        img {
+            position: absolute;
+            // justify-content: center;
+            // border-radius: 50px;
+            // transform: translate(-10%, -70%);
+            // top: 50%;
+            // bottom: 50%;
+            z-index: 9;
+            scale: calc(38%);
+        }
+        
+        .img {
+            position: absolute;
+            // justify-content: center;
+            // border-radius: 50px;
+            // transform: translate(-10%, -70%);
+            // top: 50%;
+            // bottom: 50%;
+            z-index: 9;
+            scale: calc(80%);
+        }
+
+
+        .blur-thing {
+            height: 100%;
+            width: 45%;
+            border-radius: 25px 50px 50px 25px;
+            background: #7c7c7c;
+            filter: blur(1.5px);
+        }
+    }
+
+    span {
+        position: absolute;
+        bottom: 10px;
+        right: 13px;
+        place-content: end;
+    }
+}
+
+.asignar-button-green {
+    position: relative;
+    display: flex;
+    color: white;
+    border-radius: 24px;
+    background: linear-gradient(90deg,  rgba(68, 112, 43, 0.87) 100%, #6a994e 0%,);
+    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
+    // justify-content: baseline;
+    .img-box {
+        position: relative;
+        height: 100%;
+        width: 100%;
+        border-radius: 7px 50px 50px 7px;
+        display: flex; /* Usar Flexbox */
+        align-items: center; /* Centrar verticalmente */
+        justify-content: left;
+        // background: #1B2654;
+        // background-position: 20%;
+        // background-image: url('../png/unidad_estacionario.png');
+        // background-size: contain;
+
+        img {
+            position: absolute;
+            // justify-content: center;
+            // border-radius: 50px;
+            // transform: translate(-10%, -70%);
+            // top: 50%;
+            // bottom: 50%;
+            z-index: 9;
+            scale: calc(38%);
+        }
+        
+        .img {
+            position: absolute;
+            // justify-content: center;
+            // border-radius: 50px;
+            // transform: translate(-10%, -70%);
+            // top: 50%;
+            // bottom: 50%;
+            z-index: 9;
+            scale: calc(80%);
+        }
+
+
+        .blur-thing {
+            height: 100%;
+            width: 45%;
+            border-radius: 25px 50px 50px 25px;
+            background: rgba(68, 112, 43, 0.87);
+            filter: blur(1.5px);
+        }
+    }
+
+    span {
+        position: absolute;
+        bottom: 10px;
+        right: 13px;
+        place-content: end;
+    }
+}
+
+.monitor-dialog-options.buttons-box.active-box {
+    // display: none;
+    transition: transform  .3s ease;
+    transform: translate(0);
+}
+
+.monitor-dialog-options.buttons-box {
+    // display: flex;
+    transition: transform  .3s ease;
+    transform: translateX(-110%);
+}
+
+.monitor-dialog-options.action {
+    position: absolute;
+    transition: transform  .3s ease;
+    transform: translateX(101%);
+}
+
+.monitor-dialog-options.action.active-box {
+    // display: flex;
+    transition: transform  .3s ease;
+    transform: translateX(0);
+}
