@@ -1,0 +1,63 @@
+@import "variables";
+
+
+.inc2{
+    flex-direction: column;
+    justify-content: center;
+    padding: 2.5vw;
+    p:nth-child(1) {
+        color: $color-orange-intergas;
+    }
+    p:nth-child(2) {
+        font-size: 1.2vh;
+        color: white;
+    }
+}
+
+.warn-back {
+    background-image: url("../png/bannerDashboard.jpg");
+    box-shadow: $shadow-dashboard-cards;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 20px;
+    // background-position: center;
+    border-top: none;
+    color: $color-white;
+    width: 100%;
+    height: 100%;
+    .date{
+        display: flex;        
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+        padding: 2.5vw;
+        p:nth-child(1) {
+            font-size: 4vw;
+            color: #1B2654;
+        }
+        p:nth-child(2) {
+            font-size: 4vw;
+            color: $color-orange-intergas;
+        }
+    }
+    
+    .inc{
+        display: flex;        
+        flex-direction: column;
+        justify-content: center;
+        margin-right: 1vw;
+        margin-left: 10vw;
+        p:nth-child(1) {
+            color: $color-orange-intergas;
+            font-size: 1.7vw;
+        }
+        p:nth-child(2) {
+            font-size: 1vw;
+        }
+    }
+}
+
+.calendar{
+    height: 100%;
+}
+

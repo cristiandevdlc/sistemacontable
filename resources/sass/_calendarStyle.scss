@@ -1,0 +1,63 @@
+@import "variables";
+.container {
+
+  h2 {
+    font-size: 16px;
+    padding: 1vh;
+    text-align: center;
+  }
+
+  h2::first-letter {
+    text-transform: uppercase;
+  }
+
+  .calendar {
+    font-family: $font-family-sans-serif;
+    width: 100%;
+    max-height: 100%;
+    table-layout: fixed;
+    
+    thead {
+      tr {
+        th {
+          font-size: 12px;
+          padding: 1vh;
+          color: #1B2654;
+        }
+      }
+    }
+
+    tbody {
+      tr {
+        td {
+          padding: 1vh 0vh;
+          font-size: 12px;
+          cursor: pointer;
+        }
+
+        .other-month-day {
+          color: #000000;
+        }
+
+        .last-eight-days {
+          color: #000000; /* Cambio de color a gris */
+        }
+
+        .current-day {
+          background-color: #1B2654;
+          color: rgb(253, 253, 253);
+          font-weight: bold;
+          border-radius: 10px;
+        }
+      }
+    }
+  }
+}
+
+.cell {
+  text-align: center;
+  color: #727272;
+
+}
+
+//responsive

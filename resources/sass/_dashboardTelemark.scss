@@ -1,0 +1,35 @@
+@import "variables";
+
+.containerTelemark{
+    display: flex;
+    flex-direction: column;
+    &__info{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 1vh;
+        &--transito{
+            background-color: #1B2654;
+            color: white;
+            width: 33%;
+            height: 100%;
+        }
+        &--tecnico{
+            background-color: #1B2654;
+            color: white;
+            width: 33%;
+            height: 100%;
+        }
+        &--pedidos{
+            background-color: #1B2654;
+            color: white;
+            width: 33%;
+            height: 100%;
+        }
+    }
+}
+
+@import '../sass/responsive/dashboard-telemark/responsive-1200';
+@import '../sass/responsive/dashboard-telemark/responsive-1024';
+@import '../sass/responsive/dashboard-telemark/responsive-900';
+@import '../sass/responsive/dashboard-telemark/responsive-750';

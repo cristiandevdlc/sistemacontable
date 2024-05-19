@@ -1,0 +1,29 @@
+.clientePedidos {
+    #topTableActions {
+        zoom: .65;
+    }
+
+    #addressTable {
+        td {
+            text-align: start !important;
+            font-size: 10px;
+            max-width: 50px !important;
+        }
+
+        td[role=columnheader]:nth-child(n+4) {
+            text-align: center !important;
+        }
+
+        max-width: 100vw !important;
+    }
+
+    #datagrid {
+        min-width: 100px !important;
+    }
+
+    .material-icons {
+        width: 100%;
+        text-align: center;
+        font-size: 15px !important;
+    }
+}

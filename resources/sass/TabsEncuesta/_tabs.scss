@@ -1,0 +1,234 @@
+:root {
+	--primary-color: #185ee0;
+	--secondary-color: #e6eef9;
+}
+
+.tabs-encuesta {
+	display: flex;
+	position: relative;
+	width: 100%;
+	background-color: #fff;
+    box-shadow: 25px 9px 1px 1px rgba(24, 94, 224, 0), 1px 3px 6px 6px rgba(24, 94, 224, 0.1),1px 3px 6px 1px rgba(24, 94, 224, 0.1),1px 3px 6px 1px rgba(24, 94, 224, 0.1);
+	// padding: 0.75rem;
+	border-radius: 12px; 
+	// background-color: red;
+	* {
+		z-index: 2;
+	}
+}
+
+.container-encuesta {
+	position: relative;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+
+
+.tab {
+	display: flex;
+	position: relative;
+	align-items: center;
+	justify-content: center;
+	height: 54px;
+	width: 100%;
+	font-size: 1.25rem;
+	font-weight: 500;
+	margin: .75rem;
+	border-radius: 12px; 
+	// background-color: yellow;
+	cursor: pointer;
+	transition: color 0.15s ease-in;
+}
+
+.tab-dialog {
+	display: flex;
+	position: relative;
+	align-items: center;
+	justify-content: center;
+	height: 40px;
+	width: 100%;
+	font-size: 1.25rem;
+	font-weight: 500;
+	margin: .75rem;
+	border-radius: 12px; 
+	// background-color: yellow;
+	cursor: pointer;
+	transition: color 0.15s ease-in;
+}
+
+input[type="radio"] {
+	display: none;
+}
+
+input[type="radio"] {
+	&:checked {
+		& + label {
+			color: var(--primary-color);
+		}
+	}
+}
+
+input[id="radio-1"] {
+	&:checked {
+		& ~ .glider {
+			display: flex;
+			transform: translateX(0);
+		}
+		& ~ .gliderDailyOrders {
+			display: flex;
+			transform: translateX(0);
+		}
+		& ~ .gliderTanks {
+			display: flex;
+			transform: translateX(0);
+		}
+		& ~ .orderClients {
+			display: flex;
+			transform: translateX(0);
+		}
+		& ~ .gliderAddressOrders {
+			display: flex;
+			transform: translateX(0);
+		}
+	}
+}
+
+input[id="radio-2"] {
+	&:checked {
+		& ~ .glider {
+			display: flex;
+			transform: translateX(100%);
+		}
+		& ~ .gliderDailyOrders {
+			display: flex;
+			transform: translateX(100%);
+		}
+		& ~ .gliderTanks {
+			display: flex;
+			transform: translateX(100%);
+		}
+		& ~ .orderClients {
+			display: flex;
+			transform: translateX(100%);
+		}
+		& ~ .gliderAddressOrders {
+			display: flex;
+			transform: translateX(100%);
+		}
+	}
+}
+
+input[id="radio-3"] {
+	&:checked {
+		& ~ .glider {
+			display: flex;
+			transform: translateX(200%);
+		}
+		& ~ .gliderDailyOrders {
+			display: flex;
+			transform: translateX(200%);
+		}
+		& ~ .orderClients {
+			display: flex;
+			transform: translateX(200%);
+		}
+		& ~ .gliderAddressOrders {
+			display: flex;
+			transform: translateX(200%);
+		}
+	}
+}
+input[id="radio-4"] {
+	&:checked {
+		& ~ .glider {
+			display: flex;
+			transform: translateX(300%);
+		}
+		& ~ .gliderDailyOrders {
+			display: flex;
+			transform: translateX(300%);
+		}
+		& ~ .orderClients {
+			display: flex;
+			transform: translateX(300%);
+		}
+	}
+}
+input[id="radio-5"] {
+	&:checked {
+		& ~ .glider {
+			display: flex;
+			transform: translateX(400%);
+		}
+		& ~ .gliderDailyOrders {
+			display: flex;
+			transform: translateX(400%);
+		}
+	}
+}
+
+.glider {
+	position: absolute;
+	display: none;
+	height: 100%;
+	width: 20%;
+	background-color: var(--secondary-color);
+	z-index: 1;
+	border-radius: 12px; 
+	transition: 0.25s ease-out;
+}
+.gliderAddressOrders {
+	position: absolute;
+	display: none;
+	height: 100%;
+	width: 33.33%;
+	background-color: var(--secondary-color);
+	z-index: 1;
+	border-radius: 12px; 
+	transition: 0.25s ease-out;
+}
+
+.gliderDailyOrders {
+	position: absolute;
+	display: none;
+	height: 100%;
+	width: 25%;
+	background-color: var(--secondary-color);
+	z-index: 1;
+	border-radius: 12px; 
+	transition: 0.25s ease-out;
+}
+
+.gliderTanks {
+	position: absolute;
+	display: none;
+	height: 100%;
+	width: 50%;
+	background-color: var(--secondary-color);
+	z-index: 1;
+	border-radius: 12px; 
+	transition: 0.25s ease-out;
+}
+
+.orderClients {
+	position: absolute;
+	display: none;
+	height: 100%;
+	width: 34%;
+	background-color: var(--secondary-color);
+	z-index: 1;
+	border-radius: 12px; 
+	transition: 0.25s ease-out;
+}
+
+@media (max-width: 700px) {
+	.tabs {
+		transform: scale(0.6);
+	}
+}

@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Para animar */
+.tradu {
+  @apply transition-all duration-200
+}
+

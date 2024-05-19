@@ -1,0 +1,74 @@
+.dropdown-root {
+    background: none;
+    // border-color: black;
+    color: "#4d4d4d";
+    font-size: 14px;
+
+
+    font-family: "monserrat";
+    font-weight: "bold";
+    width: 100%;
+    height: 45px;
+    border-radius: 12px;
+    margin-top: unset;
+}
+
+.dropdown-panel {
+    overflow-y: auto;
+    max-height: 200px;
+}
+
+.dropdown-item {
+    font-size: 1em;
+}
+
+.p-inputtext-custom {
+    // font-size: 14px;
+    font-family: "monserrat";
+}
+
+.p-dropdown:not(.p-disabled):hover {
+    border-color: #000000;
+}
+
+.p-dropdown:not(.p-disabled).p-focus {
+    outline: 0 none;
+    outline-offset: 0;
+    box-shadow: 0 0 0 0;
+    border-color: #185ee0;
+    border-width: 2px;
+    color: #185ee0;
+}
+
+.p-dropdown-panel .p-dropdown-items .p-dropdown-item.p-highlight {
+    color: #4d4d4d;
+    background: #e6eef9;
+}
+
+.p-dropdown .p-dropdown-trigger {
+    background: transparent;
+    color: #6c757d;
+    width: 2rem;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+
+.qnConQnDropdown {
+    .p-dropdown {
+        border-color: red;
+        border: none transparent;
+        width: 100%;
+    }
+
+    .p-dropdown-label {
+        font-size: 12px;
+    }
+}
+
+.css-l6u4if-MuiButtonBase-root-MuiMenuItem-root {
+    font-size: small !important;
+}
+
+.MuiTypography-root:not(.MuiTypography-h6){
+    font-size: 12px !important;
+}

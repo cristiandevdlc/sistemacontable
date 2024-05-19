@@ -1,0 +1,193 @@
+.containerInputComp {
+  position: relative;
+  width: 100%;
+  margin-top: 2vh;
+
+  .labelComp {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    font-family: monserrat;
+    pointer-events: none;
+    transition: all 0.1s ease-out;
+    color: #CBCBCB;
+    resize: none;
+    padding: 1px 10px;
+    transition: .3s;
+    font-size: 14px;
+    background-color: transparent;
+  }
+
+  .p-inputtext {
+    font-family: monserrat !important;
+    color: black !important;
+    width: 100% !important;
+    height: 45px !important;
+    padding: 1.5vh 1vh !important;
+    font-size: 14px !important;
+    border-radius: 12px !important;
+    background-color: white !important;
+
+
+    &.inputtextIcon {
+      padding: 1.5vh 1vh !important;
+      padding-left: 3vh !important;
+    }
+  }
+
+  .p-inputtext:disabled {
+    font-family: monserrat !important;
+    color: black !important;
+    width: 100% !important;
+    height: 45px !important;
+    padding: 1.5vh 1vh !important;
+    font-size: 14px !important;
+    border-radius: 12px !important;
+    // background-color: white !important;
+
+
+  }
+
+  &.focused .labelComp,
+  .p-inputtext:not(:placeholder-shown)+label {
+    top: -13px;
+    font-size: 12px;
+    padding: 4px 5px 1px 5px;
+    color: #a3a3a3;
+    border-radius: 7px;
+    border: none;
+  }
+
+  // .p-inputtext:disabled {
+  //   // box-shadow: none !important;}
+  //   background: red;
+  // }
+
+  .p-disabled {
+    font-family: monserrat !important;
+    color: black !important;
+    width: 100% !important;
+    height: 45px !important;
+    padding: 1.5vh 1vh !important;
+    font-size: 14px !important;
+    border-radius: 12px !important;
+
+    background-color: transparent !important;
+    width: 100% !important;
+    border: 2px dashed #a2a2a2;
+
+    &.inputtextIcon {
+      padding: 1.5vh 1vh !important;
+      padding-left: 3vh !important;
+    }
+  }
+
+  .p-inputtext:enabled:focus {
+    // box-shadow: none !important;
+    box-shadow: 0 0 1px 1px #5185ca;
+    border: 1px solid #ccc !important;
+  }
+
+  .p-inputtext:enabled:hover {
+    // box-shadow: none !important;
+    border: 1px solid #ccc !important;
+  }
+
+  &.focused .labelComp,
+  .p-inputtext:not(:placeholder-shown)+label {
+    top: -13px !important;
+    font-size: 12px !important;
+    padding: 4px 5px 1px 5px !important;
+    color: #a3a3a3 !important;
+    background-color: white !important;
+    border-radius: 7px !important;
+  }
+
+  &.focused .labelComp,
+  .p-disabled:not(:placeholder-shown)+label {
+    top: -13px !important;
+    font-size: 12px !important;
+    padding: 4px 5px 1px 5px !important;
+    color: #a3a3a3 !important;
+    background-color: white !important;
+    border-radius: 7px !important;
+  }
+
+  .inputComp {
+    width: 100%;
+    height: 45px;
+    padding: 1.5vh 1vh;
+    font-size: 14px;
+    border-radius: 12px;
+    background-color: white;
+    border: 1px solid #ccc;
+  }
+
+  .inputComp:disabled {
+    width: 100%;
+    height: 45px;
+    padding: 1.5vh 1vh;
+    font-size: 14px;
+    border-radius: 12px;
+    background-color: white;
+    border: 2px dashed #ccc;
+  }
+
+  &.focused .labelComp,
+  .inputComp:not(:placeholder-shown)+label {
+    top: -13px;
+    font-size: 12px;
+    padding: 4px 5px 1px 5px;
+    color: #a3a3a3;
+    background-color: white;
+    border-radius: 7px;
+  }
+
+  .custom-input-icon {
+    position: absolute;
+    transform: translate(20%, 45%);
+    color: #CBCBCB;
+  }
+
+  .inputCompIcon {
+    width: 100%;
+    height: 45px;
+    padding: 1.5vh 1vh;
+    padding-left: 3vh;
+    font-size: 14px;
+    border-radius: 12px;
+    background-color: white;
+    // background-color: red;
+    border: 1px solid #ccc;
+  }
+
+  .inputCompIcon:disabled {
+    width: 100%;
+    height: 45px;
+    padding: 1.5vh 1vh;
+    padding-left: 3vh;
+    font-size: 14px;
+    border-radius: 12px;
+    background-color: white;
+    border: 2px dashed #ccc;
+  }
+
+}
+
+.clientePedidos {
+  .labelComp {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    font-family: monserrat;
+    pointer-events: none;
+    transition: all 0.1s ease-out;
+    color: #CBCBCB;
+    resize: none;
+    padding: 1px 10px;
+    transition: .3s;
+    font-size: 12px;
+    background-color: transparent;
+  }
+
+}

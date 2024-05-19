@@ -1,0 +1,375 @@
+.siderbarListContainer {
+    overflow: auto;
+    // padding-bottom: 10vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+}
+
+.sidebar-menu {
+    position: relative;
+    background-color: #1B2654;
+    transition: width 0.3s ease;
+
+    .headerMenu {
+        height: 77px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 15px 15px;
+        // transform: translateX(0);
+        // transition: transform 0.4s ease;
+
+        .user-info {
+            display: block;
+            width: 85%;
+            color: white;
+            padding-top: 0.5rem;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            // transition: transform 0.4s ease;
+        }
+
+        .sidebarMenu-button {
+            top: 14px;
+            right: 2px;
+            display: flex;
+            position: absolute;
+            justify-content: right;
+            z-index: 1;
+        }
+
+    }
+
+    .search-input-sidebarMenu {
+        // width: 100%;
+        height: 48px;
+        border-radius: 10px;
+        background: #ffffff27;
+        opacity: 70%;
+        // padding: 1em;
+        cursor: text;
+        position: absolute;
+        transition: 0.15s ease-in-out;
+        color: #ffffff96;
+
+        &.focused {
+            background: #ffffff;
+            color: black;
+            opacity: 100%;
+        }
+    }
+
+    .search-icon-sidebarMenu {
+        position: relative;
+        top: 13px;
+        right: 11px;
+        color: #ffffff96;
+        cursor: text;
+        transition: 0.15s ease-in-out;
+
+        &.focused {
+            color: black;
+            opacity: 100%;
+        }
+    }
+
+    .sidebar-containerMenu {
+        // width: 280px;
+        // min-width: 280px;
+        overflow-y: auto;
+        overflow-x: hidden;
+        // height: 100%;
+        // transform: translateX(0);
+        // transition: transform 0.4s ease;
+
+        .sidebar-list {
+            // transform: translateX(0);
+            // transition: transform 0.5s ease;
+            background-color: transparent;
+
+            li {
+                padding: 8px 0;
+
+                .sidebar-item {
+                    display: block;
+                    font-size: 12pt;
+                    // height: 34px;
+                    // margin: 0.5vh 0vh;
+                    padding-left: 25px;
+                    // padding-top: 5px;
+                    transition: 0.2s;
+                    align-items: center;
+                    color: #ffffff;
+                    font-size: 16px;
+
+                    // .sidebar-accordion {
+                    //     cursor: pointer;
+                    //     border: none;
+                    //     text-align: left;
+                    //     outline: none;
+                    //     transition: 0.4s;
+                    //     padding: 5px 0 0 25px;
+                    // }
+
+                    // .item-selected {
+                    //     background-image: url("../../png/Polígono 1.png");
+                    //     background-repeat: no-repeat;
+                    //     padding-left: 2vh;
+                    //     background-position: 5% 60%;
+                    // }
+
+                    // .sidebar-active:hover {
+                    //     margin: 0vh 0vh;
+                    //     padding: 0;
+                    //     box-shadow: rgba(0, 0, 0, 0.35) 0px 1px 2px;
+                    // }
+                }
+
+                .sidebar-item.sidebar-accordion {
+                    margin: 0 0;
+                    padding: .4vh 0 0 2vh;
+                    border: none;
+                    outline: none;
+                    cursor: pointer;
+                    text-align: left;
+                    transition: 0.4s;
+                    align-items: center;
+                }
+
+                .sidebar-item.sidebar-accordion2 {
+                    margin: 0 0;
+                    padding: .4vh 0 0 2vh;
+                    border: none;
+                    outline: none;
+                    cursor: pointer;
+                    text-align: left;
+                    transition: 0.4s;
+                    align-items: center;
+                }
+
+                .sidebar-item.sidebar-accordion3 {
+                    margin: 0 0;
+                    padding: .4vh 0 0 2vh;
+                    border: none;
+                    outline: none;
+                    cursor: pointer;
+                    text-align: left;
+                    transition: 0.4s;
+                    align-items: center;
+                }
+
+                .sidebar-item.item-selected {
+                    background-repeat: no-repeat;
+                    background-position: 2% 45%;
+                    background-image: url("../../png/Polígono\ 1.png");
+                }
+
+                .submenu-panel {
+                    display: flex;
+                    max-height: 0;
+                    overflow: hidden;
+                    flex-direction: column;
+                    background-color: #0000004b;
+                    transition: max-height 0.4s ease-in-out;
+                    box-shadow: inset 0px 5px 5px -5px rgba(0, 0, 0, 0.3), inset 0px -5px 5px -5px rgba(0, 0, 0, 0.3);
+
+                    .sidebar-list {
+                        width: 100%;
+
+                        li {
+                            width: 100%;
+                            height: 100%;
+
+                            .sidebar-item {
+                                padding-left: 40px;
+                                padding-top: 7px;
+                            }
+
+                            .item-selected {
+                                padding-left: 40px;
+                                background-repeat: no-repeat;
+                                background-position: 10% 50%;
+                                background-image: url("../../png/Polígono\ 1.png");
+                            }
+                        }
+                    }
+
+                }
+
+                .submenu-panel2 {
+                    display: flex;
+                    max-height: 0;
+                    color: black;
+                    overflow: hidden;
+                    background-color: #0000004b;
+                    flex-direction: column;
+                    transition: max-height 0.4s ease-in-out;
+                    box-shadow: inset 0px 5px 5px -5px rgba(0, 0, 0, 0.3), inset 0px -5px 5px -5px rgba(0, 0, 0, 0.3);
+                    width: 100%;
+
+                    .sidebar-list {
+                        width: 100%;
+
+                        li {
+                            .sidebar-item {
+                                padding-left: 50px;
+                            }
+                        }
+
+                        .item-selected {
+                            padding-left: 40px;
+                            background-repeat: no-repeat;
+                            background-position: 10% 50%;
+                            background-image: url("../../png/Polígono\ 1.png");
+                        }
+                    }
+
+                }
+
+                .submenu-panel3 {
+                    display: flex;
+                    max-height: 0;
+                    overflow: hidden;
+                    margin: 0;
+                    flex-direction: column;
+                    background-color: #08080831;
+                    transition: max-height 0.4s ease-in-out;
+                    box-shadow: inset 0px 5px 5px -5px rgba(0, 0, 0, 0), inset 0px -5px 5px -5px rgba(255, 255, 255, 0.007);
+
+                    .sidebar-list {
+                        width: 100%;
+
+                        li {
+                            .sidebar-item {
+                                padding-left: 70px;
+                            }
+                        }
+
+                        .item-selected {
+                            background-repeat: no-repeat;
+                            background-position: 32% 50%;
+                            background-image: url("../png/Polígono 1.png");
+                        }
+                    }
+
+                }
+
+                // .submenu-panel {
+                //     display: flex;
+                //     flex-direction: column;
+                //     padding: 0 0 0 0;
+                //     max-height: 0;
+                //     overflow: hidden;
+                //     transition: max-height 0.2s ease-out;
+                //     font-size: 16px;
+                //     background-color: #0000004b;
+                //     box-shadow: inset 0px 5px 5px -5px rgba(0, 0, 0, 0.3), inset 0px -5px 5px -5px rgba(0, 0, 0, 0.3);
+
+                //     .sidebar-list {
+                //         .sidebar-item {
+                //             padding-left: 50px;
+                //         }
+                //     }
+                // }
+
+                // .submenu-panel2 {
+                //     display: flex;
+                //     flex-direction: column;
+                //     padding: 0 0 0 0;
+                //     max-height: 0;
+                //     overflow: hidden;
+                //     transition: max-height 0.2s ease-out;
+                //     font-size: 15px;
+                //     background-color: #0000004b;
+                //     box-shadow: inset 0px 5px 5px -5px rgba(0, 0, 0, 0.3), inset 0px -5px 5px -5px rgba(0, 0, 0, 0.3);
+
+                //     .sidebar-subitem {
+                //         transition: .2s;
+                //         color: #ffffff;
+                //         margin-left: 90px;
+                //         margin-bottom: 0;
+                //         padding-bottom: 10px;
+                //         padding-top: 8px;
+                //     }
+
+                // }
+
+                // .submenu-panel3 {
+                //     display: flex;
+                //     flex-direction: column;
+                //     padding: 0 0px;
+                //     max-height: 0;
+                //     overflow: hidden;
+                //     box-shadow: inset 0px 5px 5px -5px rgba(0, 0, 0, 0.3), inset 0px -5px 5px -5px rgba(0, 0, 0, 0.3);
+                //     transition: max-height 0.2s ease-out;
+                //     font-size: 15px;
+                //     background-color: #0000004b;
+
+                // }
+            }
+        }
+    }
+
+    .footerMenu {
+        height: 77px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 10px;
+        transform: translateX(0);
+        transition: transform 0.4s ease;
+
+        .logout-button {
+            // top: 10px;
+            // right: 5px;
+            display: flex;
+            // position: absolute;
+            justify-content: right;
+            z-index: 1;
+        }
+
+        .clickeableItem {
+            z-index: 1;
+        }
+    }
+}
+
+.sidebar-accordion:before {
+    content: '\25BE';
+    font-weight: bold;
+    float: left;
+    margin-right: 10px;
+    // color: #FC4C02;
+}
+.sidebar-accordion2:before {
+    content: '\25BE';
+    font-weight: bold;
+    float: left;
+    margin-right: 10px;
+    // color: #FC4C02;
+}
+.sidebar-accordion3:before {
+    content: '\25BE';
+    font-weight: bold;
+    float: left;
+    margin-right: 10px;
+    // color: #FC4C02;
+}
+
+.sidebar-active:before {
+    content: '\25B4';
+}
+.sidebar-active2:before {
+    content: '\25B4';
+}
+.sidebar-active3:before {
+    content: '\25B4';
+}
+
+.item-selected {
+    background-image: url("../../png/Polígono 1.png");
+    background-repeat: no-repeat;
+    background-position: 5% 50%;
+}
