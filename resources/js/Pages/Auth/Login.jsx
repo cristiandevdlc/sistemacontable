@@ -4,7 +4,7 @@ import InputLabel from '@/Components/InputLabel';
 import TextInput from '@/Components/TextInput';
 import { Head, useForm } from '@inertiajs/react';
 import Footer from '@/components/Footer';
-import intergasLogo from '../../../png/Grupo 10@2x.png'
+// import intergasLogo from '../../../png/Grupo 10@2x.png'
 import { useState } from 'react';
 import request from '@/utils';
 import SelectComp from "@/components/SelectComp";
@@ -41,7 +41,7 @@ export default function Login({ status }) {
     <>
       <div className='flex flex-col items-center justify-center min-h-screen'>
         <div>
-          <img className='non-selectable' src={intergasLogo} alt="logo" />
+          {/* <img className='non-selectable' src={intergasLogo} alt="logo" /> */}
         </div>
         <div className="w-full max-w-md px-6 py-4 mt-6 rounded-lg">
           <Head title="Log in" />
@@ -54,6 +54,7 @@ export default function Login({ status }) {
                 type="text"
                 name="usuario_username"
                 value={data.usuario_username}
+                onlyUppercase={false}
                 autoComplete="username"
                 isFocused={true}
                 onChange={(e) => setData('usuario_username', e.target.value)}

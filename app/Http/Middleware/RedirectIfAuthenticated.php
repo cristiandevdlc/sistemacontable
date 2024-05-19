@@ -17,6 +17,11 @@ class RedirectIfAuthenticated
      */
     public function handle(Request $request, Closure $next, string ...$guards): Response
     {
+        // if(!$request->session()->has('user')) {
+        //     return $next($request);
+        // }
+        // return redirect()->route('Home', '/');
+
         $guards = empty($guards) ? [null] : $guards;
 
         foreach ($guards as $guard) {
@@ -24,7 +29,7 @@ class RedirectIfAuthenticated
                 return redirect(RouteServiceProvider::HOME);
             }
         }
-
         return $next($request);
+
     }
 }
