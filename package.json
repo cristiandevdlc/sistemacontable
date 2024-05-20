@@ -25,14 +25,13 @@
         "@emotion/styled": "^11.11.5",
         "@mui/icons-material": "^5.15.18",
         "@mui/material": "^5.15.17",
+        "bootstrap": "^5.3.3",
         "devextreme": "^23.2.6",
-<<<<<<< HEAD
         "material-icons": "^1.13.12",
         "primereact": "^10.6.5",
         "react-datepicker": "^6.9.0",
         "react-lazy": "^1.1.0",
-=======
->>>>>>> 3f79b784d3fe4f34f05becba95928cc467bd0f7e
-        "react-router-dom": "^6.23.1"
+        "react-router-dom": "^6.23.1",
+        "react-window": "^1.8.10"
     }
 }

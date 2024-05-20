@@ -1,10 +1,21 @@
 <?php
 
-use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
+use App\Http\Controllers\Auth\AuthenticatedSessionController;
+use App\Http\Controllers\ConnectionsController;
+use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\RouteController;
+use App\Http\Controllers\UserController;
+use App\Models\Menu;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\URL;
+use Tymon\JWTAuth\Facades\JWTAuth;
+
+
 
 /*
 |--------------------------------------------------------------------------
@@ -16,18 +27,11 @@ use Inertia\Inertia;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/{path}', function () {
-    return Inertia::render('Home', [
-        'canLogin' => Route::has('login'),
-        'canRegister' => Route::has('register'),
-        'laravelVersion' => Application::VERSION,
-        'phpVersion' => PHP_VERSION,
-    ]);
-});
+// Route::get('/{path}', [RouteController::class, 'route'])->where('path', '.*')
+// ->middleware(['auth']);
 
 Route::middleware(['authWeb', 'database'])->group(function () {
-    // Route::get('database-configuration', [ConnectionsController::class, 'create']);
+    Route::get('database-configuration', [ConnectionsController::class, 'create']);
     Route::get('login', [AuthenticatedSessionController::class, 'create'])
         ->name('login');
     Route::post('login', [AuthenticatedSessionController::class, 'store']);
@@ -38,7 +42,7 @@ Route::post('logout', [AuthenticatedSessionController::class, 'destroy'])
     ->name('logout')->middleware('auth');
 
 Route::get('/{path}', [DashboardController::class, 'index'])
-    // ->middleware(['auth','authWeb', 'database', 'permission'])
+    ->middleware(['auth','authWeb', 'database', 'permission'])
     ->where('path', '^(?!login).*')
     ->where('path', '^(?!logout).*')
     ->where('path', '^(?!unities).*')
@@ -46,16 +50,10 @@ Route::get('/{path}', [DashboardController::class, 'index'])
     // ->where('path', '^(?!errors).*')
     ->name('dashboard');
 
+// Reoute::get('/getMenus', [])
 
 
-Route::get('/dashboard', function () {
-    return Inertia::render('Dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+// Route::get('api/user/menus', [UserController::class, 'menus'])->middleware('auth')->name('user.menus');
 
-Route::middleware('auth')->group(function () {
-    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
-    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
-    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
-});
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';

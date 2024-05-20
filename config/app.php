@@ -29,6 +29,7 @@ return [
     |
     */
 
+
     'env' => env('APP_ENV', 'production'),
 
     /*
@@ -70,8 +71,7 @@ return [
     |
     */
 
-    'timezone' => 'UTC',
-
+    'timezone' => 'America/Mexico_City',
     /*
     |--------------------------------------------------------------------------
     | Application Locale Configuration
@@ -83,7 +83,7 @@ return [
     |
     */
 
-    'locale' => 'en',
+    'locale' => 'es',
 
     /*
     |--------------------------------------------------------------------------
@@ -141,7 +141,7 @@ return [
 
     'maintenance' => [
         'driver' => 'file',
-        // 'store' => 'redis',
+        // 'store'  => 'redis',
     ],
 
     /*
@@ -164,10 +164,13 @@ return [
          * Application Service Providers...
          */
         App\Providers\AppServiceProvider::class,
+        // Intervention\Image\ImageServiceProvider::class,
         App\Providers\AuthServiceProvider::class,
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+        // SimpleSoftwareIO\QrCode\QrCodeServiceProvider::class,
+
     ])->toArray(),
 
     /*
@@ -181,8 +184,5 @@ return [
     |
     */
 
-    'aliases' => Facade::defaultAliases()->merge([
-        // 'Example' => App\Facades\Example::class,
-    ])->toArray(),
 
 ];

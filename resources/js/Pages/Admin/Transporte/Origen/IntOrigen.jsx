@@ -1,0 +1,36 @@
+export const origenData = {
+    RFCOrigen: '', 
+    NombreRFCOrigen: '', 
+    Estatus: 1, 
+    Calle: '', 
+    NumExterior: '', 
+    NumInterior: '', 
+    Referencia: '', 
+    idPais: '', 
+    idEstado: '', 
+    CodigoPostal: '', 
+    idColonia: '', 
+    idLocalidad: '', 
+    idMunicipio: '', 
+    descripcionEstado: '', 
+    descripcionMunicipio: '', 
+    descripcionPais: '', 
+    descripcionLocalidad: ''
+}
+export const origenValidations = {
+    RFCOrigen: ['required', 'rfc'], 
+    NombreRFCOrigen: 'required', 
+    Calle: 'required', 
+    NumExterior: 'required', 
+    Referencia: 'required', 
+    idPais: 'required', 
+    idEstado: 'required', 
+    CodigoPostal: 'required', 
+    idColonia: 'required', 
+    idLocalidad: 'required', 
+    idMunicipio: 'required', 
+    // descripcionEstado: 'required', 
+    // descripcionMunicipio: 'required', 
+    // descripcionPais: 'required', 
+    // descripcionLocalidad: 'required'
+}

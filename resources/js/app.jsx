@@ -17,16 +17,7 @@ import { resolvePageComponent } from 'laravel-vite-plugin/inertia-helpers';
 import '@/utils'
 import { noty } from '@/utils';
 
-// Registro del Service Worker
-// if ('serviceWorker' in navigator) {
-//     navigator.serviceWorker.register('/firebase-messaging-sw.js')
-//         .then((registration) => {
-//             console.log('Service Worker registrado con éxito:', registration);
-//         })
-//         .catch((error) => {
-//             console.error('Error al registrar Service Worker:', error);
-//         });
-// }
+
 
 // navigator.serviceWorker.getRegistrations().then(registrations => {
 //     console.log(registrations)

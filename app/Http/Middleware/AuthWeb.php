@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Session;
 use Symfony\Component\HttpFoundation\Response;
 use Tymon\JWTAuth\Facades\JWTAuth;
 use Tymon\JWTAuth\Token;
-
+ 
 class AuthWeb
 {
     /**
@@ -41,8 +41,8 @@ class AuthWeb
                 }
             }
             if (in_array($request->path(), RouteServiceProvider::SKIPPED_ROUTES_JWT))
-                return $next($request);
-            else
+            // return $next($request);
+            // else
                 return response()->redirectTo('login');
         } catch (\Throwable $th) {
             Session::forget('token');

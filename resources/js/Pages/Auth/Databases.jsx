@@ -4,7 +4,7 @@ import InputLabel from '@/Components/InputLabel';
 import TextInput from '@/Components/TextInput';
 import { Head, useForm } from '@inertiajs/react';
 import Footer from '@/components/Footer';
-// import intergasLogo from '../../../png/Grupo 10@2x.png'
+import intergasLogo from '../../../png/Grupo 10@2x.png'
 import { useState } from 'react';
 import SelectComp from "@/components/SelectComp";
 import request from '@/utils';
@@ -43,7 +43,7 @@ export default function Databases({ status }) {
     <>
       <div className='flex flex-col items-center justify-center min-h-screen'>
         <div>
-          {/* <img className='non-selectable' src={intergasLogo} alt="logo" /> */}
+          <img className='non-selectable' src={intergasLogo} alt="logo" />
         </div>
         <div className="w-full max-w-xl px-6 py-4 mt-6 rounded-lg">
           <Head title="Database config" />

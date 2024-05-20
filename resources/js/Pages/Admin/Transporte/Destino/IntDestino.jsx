@@ -1,0 +1,36 @@
+export const destinoData = {
+    RFCDestino: '', 
+    NombreRFCDestino: '', 
+    Estatus: 1, 
+    Calle: '', 
+    NumExterior: '', 
+    NumInterior: '', 
+    Referencia: '', 
+    idPais: '', 
+    idEstado: '', 
+    CodigoPostal: '', 
+    idColonia: '', 
+    idLocalidad: '', 
+    idMunicipio: '', 
+    descripcionEstado: '', 
+    descripcionMunicipio: '', 
+    descripcionPais: '', 
+    descripcionLocalidad: ''
+}
+export const destinoValidations = {
+    RFCDestino: ['required', 'rfc'], 
+    NombreRFCDestino: 'required', 
+    Calle: 'required', 
+    NumExterior: 'required', 
+    Referencia: 'required', 
+    idPais: 'required', 
+    idEstado: 'required', 
+    CodigoPostal: 'required', 
+    idColonia: 'required', 
+    idLocalidad: 'required', 
+    idMunicipio: 'required', 
+    // descripcionEstado: 'required', 
+    // descripcionMunicipio: 'required', 
+    // descripcionPais: 'required', 
+    // descripcionLocalidad: 'required'
+}
