@@ -16,7 +16,7 @@ export default function Login({ status }) {
     connection: ''
   });
   const [connections, setConnections] = useState();
-
+ console.log('hola')
   const getConnections = async () => {
     const connections = await request(route('connections'));
     setConnections(connections)
