@@ -22,6 +22,7 @@ export default function Login({ status }) {
     setConnections(connections)
   }
 
+  console.log('first')
   useEffect(() => {
     const token = localStorage.getItem('token')
     if (!connections) {
